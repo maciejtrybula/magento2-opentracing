@@ -1,9 +1,9 @@
 <?php
 /**
- * @package  magento2-clean
- * @author Maciej Trybuła <mtrybula@divante.pl>
- * @copyright 2018 Divante Sp. z o.o.
- * @license See LICENSE_DIVANTE.txt for license details.
+ * @package Trysoft\OpenTracing
+ * @author Maciej Trybuła <maciej.trybula@gmail.com>
+ * @copyright 2018 Trysoft Maciej Trybuła
+ * @license http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  */
 
 namespace Trysoft\OpenTracing\Model\Plugin;
