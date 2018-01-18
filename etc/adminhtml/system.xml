@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="trysoft" translate="label" sortOrder="110">
+            <label>Trysoft</label>
+        </tab>
+        <section id="opentracing" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Open Tracing</label>
+            <tab>trysoft</tab>
+            <resource>Trysoft_OpenTracing::opentracing_config</resource>
+            <group id="opentracing_group" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>OpenTracing</label>
+                <field id="tracer_backend_route" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Tracer Backend Route</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
