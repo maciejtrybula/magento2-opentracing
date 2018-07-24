@@ -1,6 +1,12 @@
 {
   "name": "trysoft/magento2-opentracing",
   "description": "OpenTracing Module for Magento 2 uses zipkin",
+  "keywords": [
+    "opentracing",
+    "zipkin",
+    "magento 2",
+    "trysoft"
+  ],
   "license": [
     "MIT"
   ],

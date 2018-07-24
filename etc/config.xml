@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <opentracing>
+            <opentracing_group>
+                <tracer_backend_route>http://127.0.0.1:9411/zipkin/</tracer_backend_route>
+            </opentracing_group>
+        </opentracing>
+    </default>
+</config>
