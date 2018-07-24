@@ -3,6 +3,8 @@
 
 This is magento2 module with opentracing implementation
 
+#### Opentracing and zipkin based on implementation by [jcchavezs](https://github.com/opentracing/opentracing-php)
+
 ### tech info
 magento2 + nginx + php7-fpm + zipkin + opentracing
 
