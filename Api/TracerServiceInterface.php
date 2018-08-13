@@ -66,9 +66,9 @@ interface TracerServiceInterface
     public function sendSpan(Span $span): ResponseInterface;
 
     /**
-     * @return Span
+     * @return null|Span
      */
-    public function getMagentoLaunchSpan(): Span;
+    public function getMagentoLaunchSpan();
 
     /**
      * Mock for \Opentracing\Tracer::startSpan to intercept magento launch span
@@ -76,9 +76,9 @@ interface TracerServiceInterface
      * @param string $operationName
      * @param array|StartSpanOptions $options
      *
-     * @return Span
+     * @return null|Span
      * @throws InvalidSpanOption for invalid option
      * @throws InvalidReferencesSet for invalid references set
      */
-    public function startSpan($operationName, $options = []): Span;
+    public function startSpan($operationName, $options = []);
 }

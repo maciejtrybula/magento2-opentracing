@@ -278,9 +278,9 @@ class TracerService implements TracerServiceInterface
     }
 
     /**
-     * @return Span
+     * @return null|Span
      */
-    public function getMagentoLaunchSpan(): Span
+    public function getMagentoLaunchSpan()
     {
         return $this->magentoLaunchSpan;
     }
@@ -288,7 +288,7 @@ class TracerService implements TracerServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function startSpan($operationName, $options = []): Span
+    public function startSpan($operationName, $options = [])
     {
         $span = $this->getGlobalTracer()::get()->startSpan($operationName, $options);
 
