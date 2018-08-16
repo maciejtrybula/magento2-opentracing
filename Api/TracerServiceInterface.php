@@ -81,4 +81,14 @@ interface TracerServiceInterface
      * @throws InvalidReferencesSet for invalid references set
      */
     public function startSpan($operationName, $options = []);
+
+    /**
+     * @return null|Span
+     */
+    public function getEventSpan();
+
+    /**
+     * @param null|Span $eventSpan
+     */
+    public function setEventSpan($eventSpan);
 }

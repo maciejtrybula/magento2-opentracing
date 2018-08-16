@@ -1,9 +1,7 @@
 <?php
 /**
  * @package  Trysoft\OpenTracing
- * @author Maciej Trybuła <mtrybula@divante.pl>
- * @copyright 2018 Divante Sp. z o.o.
- * @license See LICENSE_DIVANTE.txt for license details.
+ * @author Maciej Trybuła <maciej.trybula@gmail.com>
  */
 
 namespace Trysoft\OpenTracing\Service;
@@ -112,6 +110,11 @@ class TracerService implements TracerServiceInterface
      * @var Span $magentoLaunchSpan
      */
     private $magentoLaunchSpan;
+
+    /**
+     * @var string $eventSpan
+     */
+    private $eventSpan;
 
     /**
      * TracerService constructor.
@@ -297,5 +300,15 @@ class TracerService implements TracerServiceInterface
         }
 
         return $span;
+    }
+
+    public function getEventSpan()
+    {
+        return $this->eventSpan;
+    }
+
+    public function setEventSpan($eventSpan)
+    {
+        $this->eventSpan = $eventSpan;
     }
 }
