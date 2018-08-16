@@ -1,9 +1,7 @@
 <?php
 /**
- * @package Trysoft\OpenTracing
- * @author Maciej Trybuła <mtrybula@divante.pl>
- * @copyright 2018 Divante Sp. z o.o.
- * @license See LICENSE_DIVANTE.txt for license details.
+ * @package  Trysoft\OpenTracing
+ * @author Maciej Trybuła <maciej.trybula@gmail.com>
  */
 
 namespace Trysoft\OpenTracing\Plugin;
@@ -41,16 +39,20 @@ class EventDispatchPlugin
     public function aroundDispatch(Manager $manager, callable $proceed, $eventName, array $data = [])
     {
         $magentoSpan = $this->tracerService->getMagentoLaunchSpan();
-
         $childOf = $magentoSpan ? ['child_of' => $magentoSpan] : [];
-
         $eventSpan = $this->tracerService->startSpan('event_' . $eventName, $childOf);
+
+        $this->tracerService->setEventSpan($eventSpan);
 
         if (!$eventSpan) {
             return;
         }
 
+        $eventData = implode('; ', array_keys($data));
+
         $eventSpan->setTag(SPAN_KIND, 'SERVER');
+        $eventSpan->setTag('event.data', $eventData);
+
         $this->tracerService->sendSpan($eventSpan);
 
         $proceed($eventName, $data);

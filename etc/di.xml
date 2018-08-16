@@ -13,4 +13,10 @@
                 sortOrder="20"
                 disabled="false" />
     </type>
+    <type name="Magento\Framework\Event\Invoker\InvokerDefault">
+        <plugin name="DispatchEventPlugin"
+                type="Trysoft\OpenTracing\Plugin\ObserverDispatchPlugin"
+                sortOrder="30"
+                disabled="false" />
+    </type>
 </config>
