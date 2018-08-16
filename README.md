@@ -12,4 +12,4 @@ This is magento2 module with opentracing implementation
 magento2 + nginx + php7-fpm + zipkin + opentracing
 
 ## Version
-    - 1.0.0-beta1
+    - 1.0.0-beta2 - events and observers
